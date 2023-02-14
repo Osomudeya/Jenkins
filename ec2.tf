@@ -103,7 +103,7 @@ resource "null_resource" "name" {
   # ssh into the ec2 instance 
   connection {
     type        = "ssh"
-    user        = ec2-user
+    user        = "ec2-user"
     private_key = file("~/Downloads/kops2.pem")
     host        = aws_instance.ec2_instance.public_ip
   }
