@@ -32,7 +32,7 @@ resource "aws_default_subnet" "default_az1" {
 resource "aws_security_group" "ec2_security_group" {
   name        = "ec2 security group"
   description = "allow access on ports 8080 and 22"
-  vpc_id      = aws_default_vpc.default_vpc.vpc_id
+  vpc_id      = aws_default_vpc.default_vpc.id
 
   # allow access on port 8080
   ingress {
