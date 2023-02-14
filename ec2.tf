@@ -104,7 +104,7 @@ resource "null_resource" "name" {
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("~/.Downloads/jenkins.pem")
+    private_key = file("./Downloads/jenkins.pem")
     host        = aws_instance.ec2_instance.public_ip
   }
 
